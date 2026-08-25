@@ -20,3 +20,12 @@ uplink-super-surplus-bundle-desc = Contains 625 telecrystals worth of completely
 
 uplink-syndicate-segway-crate-name = Syndicate Segway
 uplink-syndicate-segway-crate-desc = Be an enemy of the corporation, in style!
+
+uplink-virus-uploader-power-grid-check-name = Bureaucratic Disturbance Virus Uploader
+uplink-virus-uploader-power-grid-check-desc = Elite CyberSun hackers have developed this specialized device allowing you to disrupt the station's job management system, causing personnel shortages in some departments and redundant staffing in others.
+
+uplink-virus-uploader-bureaucratic-error-name = Station Powernet Virus Uploader
+uplink-virus-uploader-bureaucratic-error-desc = Elite CyberSun hackers have developed this specialized device allowing you to intentionally trigger the station's precautionary powernet check, causing all APCs to go offline for the duration.
+
+uplink-virus-uploader-disable-telecomms-name = Telecomms Sabotage Virus Uploader
+uplink-virus-uploader-disable-telecomms-desc = Elite CyberSun hackers have developed this specialized device allowing you to temporarily disable Nanotrasen communication channels. Guaranteed to last at least two minutes!

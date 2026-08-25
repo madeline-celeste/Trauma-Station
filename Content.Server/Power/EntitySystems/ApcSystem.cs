@@ -156,6 +156,8 @@ public sealed partial class ApcSystem : EntitySystem
 
     private void OnEmagged(EntityUid uid, ApcComponent comp, ref GotEmaggedEvent args)
     {
+        UpdateApcState(uid); // Trauma - bugfix apc emag visuals not updating
+
         if (!_emag.CompareFlag(args.Type, EmagType.Interaction))
             return;
 

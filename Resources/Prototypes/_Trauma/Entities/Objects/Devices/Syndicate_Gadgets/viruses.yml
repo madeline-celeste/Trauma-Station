@@ -1,0 +1,48 @@
+- type: entity
+  parent: [ BaseItem, BaseMajorContraband ]
+  abstract: true
+  id: BaseVirusUploader
+  name: virus uploader
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/door_remote.rsi
+    layers:
+    - state: door_remotebase
+    - state: door_remotelightscolour
+      color: "#696969"
+    - state: door_remotescreencolour
+      color: "#696969" # thank you TG
+  - type: ApcVirusUploader
+
+- type: entity
+  id: VirusUploaderBureaucraticError
+  parent: BaseVirusUploader
+  name: bureaucratic disturbance virus uploader
+  description: Uploads an advanced specialized virus into the station's APC network, causing some of the station's job opening slots to be randomized.
+  components:
+  - type: ApcVirusUploader
+    productGamerule: BureaucraticError
+    doAfterLength: 5
+    uploadEffect: EffectSpark
+
+- type: entity
+  id: VirusUploaderPowerGridCheck
+  parent: BaseVirusUploader
+  name: station powernet virus uploader
+  description: Uploads an advanced specialized virus into the station's APC network, causing all of the station's APCs to shut down and reboot themselves after a short period of time.
+  components:
+  - type: ApcVirusUploader
+    productGamerule: PowerGridCheck
+    doAfterLength: 15
+    uploadEffect: EffectSpark
+
+- type: entity
+  id: VirusUploaderDisableTelecomms
+  parent: BaseVirusUploader
+  name: telecomms sabotage virus uploader
+  description: Uploads an advanced specialized virus into the station's APC network, causing Nanotrasen telecommunication channels to be disabled for a few minutes.
+  components:
+  - type: ApcVirusUploader
+    productGamerule: SyndicateTelecommsVirus
+    doAfterLength: 15
+    uploadEffect: EffectSpark

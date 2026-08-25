@@ -1,0 +1,102 @@
+# For when SiliconLawProvider moved to brain/mmi
+
+#- type: entity
+#  parent: MMI
+#  id: SyndicateMMI
+#  suffix: Evil
+#  description: A machine able to facilitate communication between a biological brain and electronics, enabling crew to continue to provide value after work-related incidents.
+#  components:
+#  - type: IntrinsicRadioReceiver
+#  - type: IntrinsicRadioTransmitter
+#    channels:
+#    - Syndicate
+#  - type: ActiveRadio
+#    channels:
+#    - Syndicate
+#    - Common
+#  - type: Actions
+#  - type: ActionGrant
+#    actions:
+#    - ActionViewLaws
+#  - type: SiliconLawBound
+#  - type: SiliconLawProvider
+#    laws: SyndicateStatic
+#    subverted: true
+#
+#
+#- type: entity
+#  parent: SyndicateMMI
+#  id: SyndicateMMIFilled
+#  suffix: Filled, Evil
+#  components:
+#  - type: MMI
+#    brainSlot:
+#      name: positronic-brain-slot-component-slot-name-brain
+#      startingItem: OrganHumanBrain
+#      whitelist:
+#        components:
+#        - Brain
+
+- type: entity
+  parent: GeneticsMutator
+  id: GeneticsMutatorClumsiness
+  name: clumsiness mutator
+  suffix: Uplink
+  components:
+  - type: Mutator
+    mutations:
+    - MutationClumsiness
+
+- type: entity
+  parent: [ BaseItem, BaseSyndicateContraband ]
+  id: ClownPin
+  name: ultra hilarious firing pin
+  description: Advanced clowntech that can convert any firearm into a far more useful object.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/banana.rsi
+    state: peel
+  - type: FiringPin
+    effects:
+    - !type:PlaySoundEffect
+      sound: /Audio/Items/bikehorn.ogg
+    - !type:PopupMessage
+      type: Pvs
+      messages: [ "firing-pin-clown-fail" ]
+    - !type:DropItems
+    - !type:TakeStaminaDamage
+      amount: 300
+    doAfterLength: 3
+    userWhitelist:
+      components:
+      - Clumsy
+
+- type: entity
+  parent: [ BaseItem, BaseSyndicateContraband ]
+  id: ClownSuperPin
+  name: super ultra hilarious firing pin
+  description: Advanced clowntech that can convert any firearm into a far more useful object. It has a small nitrobananium charge on it.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/banana.rsi
+    state: peel
+  - type: FiringPin
+    effects:
+    - !type:PlaySoundEffect
+      sound: /Audio/Items/bikehorn.ogg
+    - !type:PopupMessage
+      type: Pvs
+      messages: [ "firing-pin-clown-fail" ]
+    - !type:DropItems
+    - !type:TakeStaminaDamage
+      amount: 300
+    - !type:Explosion
+      explosionType: Minibomb
+      intensityPerUnit: 30 # evil
+      maxTotalIntensity: 65
+      delete: false # :(
+    raiseEffectsOnUser: true
+    doAfterLength: 5.0
+    userWhitelist:
+      components:
+      - Clumsy

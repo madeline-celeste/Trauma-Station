@@ -1,0 +1,2 @@
+station-event-syndicate-telecomms-virus-start-announcement = Unauthorized activity detected within the station's telecommunications network. As a security precaution, the telecommunications will be taken offline for a short period of time.
+station-event-syndicate-telecomms-virus-end-announcement = The station's telecommunications network is back online.

@@ -394,3 +394,28 @@
     effects:
     - !type:NestedEffect
       proto: TraitorSkills
+
+- type: entity
+  parent: BaseGameRule
+  id: SyndicateTelecommsVirus
+  components:
+  - type: StationEvent
+    weight: 8
+    startAnnouncement: station-event-syndicate-telecomms-virus-start-announcement
+    endAnnouncement: station-event-syndicate-telecomms-virus-end-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    duration: 120
+    maxDuration: 240
+  - type: SolarFlareRule
+    onlyJamHeadsets: false
+    affectedChannels:
+    - Common
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    lightBreakChancePerSecond: 0
+    doorToggleChancePerSecond: 0

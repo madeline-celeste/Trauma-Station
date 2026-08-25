@@ -117,3 +117,58 @@
     Telecrystal: 20
   categories:
   - UplinkDisruption
+
+
+- type: listing
+  id: UplinkVirusUploaderBureaucraticError
+  name: uplink-virus-uploader-bureaucratic-error-name
+  description: uplink-virus-uploader-bureaucratic-error-desc
+  productEntity: VirusUploaderBureaucraticError
+  icon: { sprite: Objects/Devices/door_remote.rsi, state: door_remotebase }
+  cost:
+    Telecrystal: 10
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3 # eh
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+  categories:
+  - UplinkDisruption
+
+- type: listing
+  id: UplinkVirusUploaderPowerGridCheck
+  name: uplink-virus-uploader-power-grid-check-name
+  description: uplink-virus-uploader-power-grid-check-desc
+  productEntity: VirusUploaderPowerGridCheck
+  icon: { sprite: Objects/Devices/door_remote.rsi, state: door_remotebase }
+  cost:
+    Telecrystal: 30
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink # dont even think about it
+  categories:
+  - UplinkDisruption
+
+- type: listing
+  id: UplinkVirusUploaderDisableTelecomms
+  name: uplink-virus-uploader-disable-telecomms-name
+  description: uplink-virus-uploader-disable-telecomms-desc
+  productEntity: VirusUploaderDisableTelecomms
+  icon: { sprite: Objects/Devices/door_remote.rsi, state: door_remotebase }
+  cost:
+    Telecrystal: 20
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+  categories:
+  - UplinkDisruption
